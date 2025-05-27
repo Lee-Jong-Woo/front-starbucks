@@ -94,14 +94,17 @@ new Swiper('.awards .swiper', {
 
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
+const promotionToggleBtnIcon = promotionToggleBtn.querySelector('.material-icons');
 let isHidePromotion = false;
 
 promotionToggleBtn.addEventListener('click', function() {
   isHidePromotion = !isHidePromotion;
   if (isHidePromotion) {
     promotionEl.classList.add('hide');
+    promotionToggleBtnIcon.textContent = 'download';
   } else {
     promotionEl.classList.remove('hide');
+    promotionToggleBtnIcon.textContent = 'upload';
   }
 })
 
